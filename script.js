@@ -25,7 +25,7 @@ this.createDiv = function() {
     const newDiv = document.createElement('div');
     newDiv.style.width = this.width;
     newDiv.style.height = this.height;
-    newDiv.style.background = this.background;
+    newDiv.style.background = this.bg;
     newDiv.style.fontSize = this.fontSize;
     newDiv.textContent = 'Создался новый элемент class';
     newDiv.title = 'Новый div';
@@ -39,12 +39,13 @@ this.createP = function() {
     const newP = document.createElement('p');
     newP.innerHTML = 'Создался элемент с id';
     newP.textContent = 'Создался элемент с id';
+    newP.style.background = this.bg;
     newP.classList.add('selector');
     pageContainer.append(newP);
     };
 };
 
-const newClass = new DomElement('.div', '200px', '200px', 'grey', '25px');
+const newClass = new DomElement('#div', '200px', '200px', 'grey', '25px');
 
 newClass.createElement();
 
